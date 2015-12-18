@@ -3,12 +3,10 @@
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span id="role">%data%</span><hr/>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
 var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
 var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
 var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
 var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
@@ -228,3 +226,36 @@ window.addEventListener('resize', function(e) {
   // makes sure the map bounds get updated on page resize
   map.fitBounds(mapBounds);
 });
+
+/* To try to exceed project expectations, I added a floating “Back to Top” button by adapting code from two websites (cotswoldphoto and html-tuts). Possibly, this belongs in helper.js instead of this document. */
+
+$(window).scroll(function () {
+  if ($(this).scrollTop() !== 0) {
+    $('#toTop').fadeIn('slow');
+  } else {
+    $('#toTop').fadeOut('slow');
+  }
+});
+
+$('#toTop').click(function() {
+    $('html, body').animate( {
+      scrollTop: 0
+    }, 600);
+        return false;
+});
+
+/* To add smooth scrolling to internal anchor links, as suggested by my first code reviewer, I added the following from sycha.com. A scroll class had to be added to the links in index.html. */
+
+$(document).ready(function($) {
+ 
+  $(".scroll").click(function(event) {   
+    event.preventDefault();
+    $('html,body').animate( {
+      scrollTop: $(this.hash).offset().top
+    }, 500);
+  });
+});
+
+$('html,body').animate( {
+  scrollTop: $('[name="'+this.hash.substring(1)+'"]').offset().top
+}, 500);
