@@ -71,11 +71,16 @@ ul {
   list-style-type: none;
 }
 
-.orange {
+.container-fluid {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.red {
   background-color: #e74c3c;
 }
 
-.orange-text {
+.red-text {
   color: #e74c3c;
 }
 
@@ -91,12 +96,11 @@ ul {
 }
 
 .dark-gray {
-  background-color: #333;
+  background: url('chalkboard-background.jpg');
 }
 
-/* TODO: Replace with image later */
 #header {
-  background-color: #333;
+  background: url('chalkboard-background.jpg');
   padding-bottom: 30px;
 }
 
@@ -157,8 +161,13 @@ ul {
   color: #000;
 }
 
-.navbar-default .navbar-nav > li > a:hover {
+.navbar-default .navbar-nav > li > a {
   color: #337ab7 !important;
+  text-align: center;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #9b9b9b !important;
   background-color: #e7e7e7 !important;
 }
 
@@ -167,7 +176,7 @@ ul {
   margin-bottom: 0;
 }
 
-/* 2 new divs for Project sub-sections */
+/* 2 new divs for project sub-sections */
 .education-entry,
 .work-entry,
 #projects,
@@ -213,8 +222,9 @@ ul {
   display: none;
   border: none;
   text-decoration: none;
+  font-weight: 700;
   background-color: #337ab7;
-  padding: 5px !important;
+  padding: 15px !important;
 }
 
 /* Media queries to handle various device widths */

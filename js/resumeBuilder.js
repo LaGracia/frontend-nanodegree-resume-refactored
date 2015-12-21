@@ -1,6 +1,4 @@
-/* Comments throughout this document are reminders to myself, mostly of where I found solutions to the problems that cropped up during the JavaScript Basics course. The answers for these are in the discussion forum. Other comments refer to changes I made based on my code reviewer’s suggestions. */
-
-'use strict';
+/* Comments throughout this document are reminders to myself, mostly of where I found solutions to the problems that cropped up during the JavaScript Basics course. The answers for these are in the discussion forum. Other comments refer to changes I made based on the first code reviewer’s suggestions. */
 
 // make code more readable
 var data = '%data%';
@@ -15,9 +13,9 @@ var bio = {
         'twitter' : '@lagracity',
         'location' : 'Jakarta, Indonesia'
         },
-    'welcomeMsg' : 'To strive, to seek, to find, and not to yield.',
+    'welcomeMessage' : 'To strive, to seek, to find, and not to yield.',
     'skills' : ['secondary education', 'video transcription', ' web development'],
-    'bioPic' : 'images/lgraci.jpg'
+    'biopic' : 'images/lgraci.jpg'
 };
 
 // encapsulate a display function in the bio object
@@ -35,8 +33,8 @@ bio.display = function() {
     var formattedGitHub = HTMLgithub.replace(data, contact.github);
     var formattedTwitter = HTMLtwitter.replace(data, contact.twitter);
     var formattedLocation = HTMLlocation.replace(data, contact.location);
-    var formattedWelcomeMsg = HTMLwelcomeMsg.replace(data, bio.welcomeMsg);
-    var formattedPicture = HTMLbioPic.replace(data, bio.bioPic);
+    var formattedWelcomeMsg = HTMLwelcomeMessage.replace(data, bio.welcomeMessage);
+    var formattedPicture = HTMLbiopic.replace(data, bio.biopic);
 
     // add a header div with name and role above the topContacts div
     $header.prepend(formattedName, formattedRole);
@@ -122,8 +120,10 @@ work.display = function() {
 
         if (work.jobs.hasOwnProperty(job)) {
 
+            // make code more readable
             var thisJob = work.jobs[job];
 
+            // replace helper.js strings for each job
             var formattedEmployer = HTMLworkEmployer.replace(data, thisJob.employer);
             var formattedTitle = HTMLworkTitle.replace(data, thisJob.title);
             var formattedDates = HTMLworkDates.replace(data, thisJob.dates);
@@ -157,7 +157,7 @@ var education = {
             'location' : 'New South Wales, Australia',
             'degree' : 'Graduate Diploma of Secondary Education',
             'major' : ['English'],
-            'dates' : '1996-2000',
+            'dates' : '2000',
             'url' : 'http://www.csu.edu.au/'
         },
         {
@@ -165,7 +165,7 @@ var education = {
             'location' : 'New Haven, Connecticut',
             'degree' : 'Bachelor of Science in Liberal Studies',
             'major' : ['journalism', ' English', ' photography'],
-            'dates' : '1992-95',
+            'dates' : '1995',
             'url' : 'http://www.southernct.edu/'
         },
         {
@@ -173,7 +173,7 @@ var education = {
             'location' : 'Moscow, Idaho',
             'degree' : 'Bachelor of Science',
             'major' : ['journalism'],
-            'dates' : '1991-92',
+            'dates' : '1992',
             'url' : 'http://www.uidaho.edu/'
         }
     ],
@@ -181,7 +181,7 @@ var education = {
         {
             'title': 'Front-End Web Development',
             'school' : 'Udacity',
-            'dates' : 'Ongoing',
+            'dates' : '2016',
             'url' : 'http://www.udacity.com'
         }
     ]
@@ -199,8 +199,10 @@ education.display = function() {
          // filter out any inherited properties
         if (education.schools.hasOwnProperty(school)) {
 
+            // make code more readable
             var thisSchool = education.schools[school];
 
+            // replace helper.js strings for each school
             var formattedName= HTMLschoolName.replace(data, thisSchool.name);
             var formattedDegree = HTMLschoolDegree.replace(data, thisSchool.degree);
             var formattedDates = HTMLschoolDates.replace(data, thisSchool.dates);
@@ -223,10 +225,8 @@ education.display = function() {
 
     /* I changed HTMLonlineClasses in helper.js to HTMLonlineCourses to make it more consistent with the actual heading. */
 
-    // use for loop to iterate over array of online courses
     for (var course = 0; course < schLength; course ++) {
 
-        // filter out any inherited properties
         if (education.onlineCourses.hasOwnProperty(course)) {
 
             var thisCourse = education.onlineCourses[course];
@@ -236,17 +236,12 @@ education.display = function() {
             var formattedOnlineDates = HTMLonlineDates.replace(data, thisCourse.dates);
             var formattedURL = HTMLonlineURL.replace(data, thisCourse.url);
 
-            // concatenate course title and school
             var formattedOnlinecourseTitle = formattedTitle + formattedSchool;
 
             /* The heading appeared at the bottom of the section instead of the middle. The solution is in “Formatting issues Online Courses,” which adds the heading and then another "education-entry" div below it. However, this works only because I have just one online course. */
 
             $("#education").append(HTMLonlineCourses, HTMLschoolStart);
-
-            // add formatted info to the "education-entry" div
             $('.education-entry:last').append(formattedOnlinecourseTitle, formattedOnlineDates, formattedURL);
-
-            // add URL (target="_blank" added to HTMLonlineTitle in helper.js)
             $('.education-entry:last a').attr('href', thisCourse.url);
         }
     }
@@ -279,16 +274,11 @@ var projects = {
 
 projects.display = function() {
 
-    // find projects array length
     var projLength = projects.projects.length;
-
-    // use for loop to iterate over array
     for (var project = 0; project < projLength; project ++) {
-
         if (projects.projects.hasOwnProperty(project)) {
 
             var thisProject = projects.projects[project];
-
             var formattedTitle = HTMLprojectTitle.replace(data, thisProject.title);
             var formattedDates = HTMLprojectDates.replace(data, thisProject.dates);
             var formattedDescription = HTMLprojectDescription.replace(data, thisProject.description);
@@ -298,19 +288,12 @@ projects.display = function() {
             formattedTitle = formattedTitle.replace('%url%', thisProject.url);
 
             $('#projects').append(HTMLprojectStart);
-
             $('.project-entry:last').append(formattedTitle, formattedDates, formattedDescription);
 
-            // find project images array length
             var projImgLength = thisProject.images.length;
-
             if (projImgLength > 0) {
-
-                // use for loop to iterate over array
                 for (var projImage = 0; projImage < projImgLength; projImage ++) {
-
                     if (thisProject.images.hasOwnProperty(projImage)) {
-
                     var formattedImage = HTMLprojectImage.replace(data, thisProject.images[projImage]);
                     $('.project-entry:last').append(formattedImage);
                     }
@@ -338,36 +321,23 @@ var pastProjects = {
 
 pastProjects.display = function() {
 
-    // find pastProjects array length
     var pastProjLength = pastProjects.pastProjects.length;
-
-    // use for loop to iterate over array
     for (var pastProject = 0; pastProject < pastProjLength; pastProject ++) {
-
         if (pastProjects.pastProjects.hasOwnProperty(pastProject)) {
 
             var thisPastproj = pastProjects.pastProjects[pastProject];
-
             var formattedTitle = HTMLpastprojectTitle.replace(data, thisPastproj.title);
             formattedTitle = formattedTitle.replace('%url%', thisPastproj.url);
-
             var formattedDates = HTMLpastprojectDates.replace(data, thisPastproj.dates);
             var formattedDescription = HTMLpastprojectDescription.replace(data, thisPastproj.description);
 
             $('#past-projects').append(HTMLpastprojectStart);
-
             $('.past-project-entry:last').append(formattedTitle, formattedDates, formattedDescription);
 
-            // find pastProject images array length
             var pastImgLength = thisPastproj.images.length;
-
             if (pastImgLength > 0) {
-
-                // use for loop to iterate over array
                 for (var pastImage = 0; pastImage < pastImgLength; pastImage ++) {
-
                     if (thisPastproj.images.hasOwnProperty(pastImage)) {
-
                     var formattedImage = HTMLpastprojectImage.replace(data, thisPastproj.images[pastImage]);
                     $('.past-project-entry:last').append(formattedImage);
                     }

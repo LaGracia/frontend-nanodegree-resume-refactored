@@ -3,14 +3,14 @@
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span id="role">%data%</span><hr/>';
 
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+var HTMLmobile = '<li class="flex-item"><span class="red-text">mobile</span><span class="white-text">%data%</span></li>';
+var HTMLemail = '<li class="flex-item"><span class="red-text">email</span><span class="white-text">%data%</span></li>';
+var HTMLtwitter = '<li class="flex-item"><span class="red-text">twitter</span><span class="white-text">%data%</span></li>';
+var HTMLgithub = '<li class="flex-item"><span class="red-text">github</span><span class="white-text">%data%</span></li>';
+var HTMLlocation = '<li class="flex-item"><span class="red-text">location</span><span class="white-text">%data%</span></li>';
 
-var HTMLbioPic = '<img src="%data%" class="biopic">';
-var HTMLwelcomeMsg = '<span class="welcome-message white-text">%data%</span>';
+var HTMLbiopic = '<img src="%data%" class="biopic">';
+var HTMLwelcomeMessage = '<span class="welcome-message white-text">%data%</span>';
 
 var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance</h3><ul id="skills"></ul>';
 var HTMLskills = '<li class="flex-item" id="skill-list"><span class="white-text">%data%</span></li>';
@@ -227,7 +227,8 @@ window.addEventListener('resize', function(e) {
   map.fitBounds(mapBounds);
 });
 
-/* To try to exceed project expectations, I added a floating “Back to Top” button by adapting code from two websites (cotswoldphoto and html-tuts). Possibly, this belongs in helper.js instead of this document. */
+
+/* To try to exceed project expectations, I added a floating “Back to Top” button by adapting code from two websites (cotswoldphoto and html-tuts). */
 
 $(window).scroll(function () {
   if ($(this).scrollTop() !== 0) {
@@ -244,7 +245,8 @@ $('#toTop').click(function() {
         return false;
 });
 
-/* To add smooth scrolling to internal anchor links, as suggested by my first code reviewer, I added the following from sycha.com. A scroll class had to be added to the links in index.html. */
+
+/* To add smooth scrolling to internal anchor links, as suggested by the first code reviewer, I added the following from sycha.com. A "scroll" class had to be added to the links in index.html. */
 
 $(document).ready(function($) {
  
