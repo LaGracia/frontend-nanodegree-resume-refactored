@@ -7,11 +7,11 @@ var bio = {
     'name' : 'Lane Graciano',
     'role' : 'Front-End Padawan',
     'contacts' : {
-        'mobile' : '+62 21 1234567',
+        'mobile' : '+62 812 1234567',
         'email' : 'lgraci45@gmail.com',
         'github' : 'LaGracia',
         'twitter' : '@lagracity',
-        'location' : 'Jakarta, Indonesia'
+        'location' : 'Indonesia'
         },
     'welcomeMessage' : 'To strive, to seek, to find, and not to yield.',
     'skills' : ['secondary education', 'video transcription', ' web development'],
@@ -77,33 +77,29 @@ var work = {
             'employer' : 'Amara',
             'title' : 'video transcriptionist',
             'location' : 'online',
-            'dates' : 'From May 2015',
-            'description' : 'I transcribe videos on amara.com. Amara’s clients include Udacity, TED, film production houses, and software companies.',
-            'url' : 'http://amara.org/en/'
+            'dates' : 'From May 20XX',
+            'description' : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.'
         },
         {
-            'employer' : 'ACS Abu Dhabi',
-            'title' : 'High School teacher',
-            'location' : 'Abu Dhabi, UAE',
-            'dates' : '2007-14',
-            'description' : 'I taught English and literature, graphics and multimedia, and digital journalism, among other courses. I was a coach on the debate and forensics team, which competed regionally. In March 2014, I organized a TEDxYouth event.',
-            'url' : 'http://acs.sch.ae/'
+            'employer' : 'ACS',
+            'title' : 'teacher',
+            'location' : 'UAE',
+            'dates' : '20XX-XX',
+            'description' : 'Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.'
         },
         {
-            'employer' : 'St. Maur International School',
-            'title' : 'Secondary School teacher',
-            'location' : 'Yokohama, Japan',
-            'dates' : '2005-07',
-            'description' : 'I taught English language and literature at the secondary school (grades 6-12). Again, I was a coach on the debate and forensics team.',
-            'url' : 'http://www.stmaur.ac.jp/'
+            'employer' : 'St. Maur',
+            'title' : 'teacher',
+            'location' : 'Japan',
+            'dates' : '20XX-XX',
+            'description' : 'In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.'
         },
         {
-            'employer' : 'Jakarta International School',
-            'title' : 'High School teacher',
-            'location' : 'Jakarta, Indonesia',
-            'dates' : '1999-2005',
-            'description' : 'I started my teaching career here. My course load and extracurricular involvement were similar to those in subsequent schools.',
-            'url' : 'http://jisedu.or.id/'
+            'employer' : 'JIS',
+            'title' : 'teacher',
+            'location' : 'Indonesia',
+            'dates' : '19XX-20XX',
+            'description' : 'Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.'
         }
     ]
 };
@@ -138,10 +134,6 @@ work.display = function() {
 
             // add formatted info to the "work-entry" div for every job
             $('.work-entry:last').append(formattedEmployerTitle, formattedDates, formattedLocation, formattedDescription);
-
-            /* Each employer-title link only jumped to the header instead of going to an employer site. The solution is in “Trouble adding links to href attribute of ‘a’ tags through iteration.” To open the link in a new tab, target="_blank" must be added to HTMLworkEmployer in helper.js. */
-
-            $('.work-entry:last a').attr('href', thisJob.url);
         }
     }
 };
@@ -153,28 +145,25 @@ work.display();
 var education = {
     'schools' : [
         {
-            'name' : 'Charles Sturt University',
-            'location' : 'New South Wales, Australia',
+            'name' : 'CSU',
+            'location' : 'Australia',
             'degree' : 'Graduate Diploma of Secondary Education',
             'major' : ['English'],
-            'dates' : '2000',
-            'url' : 'http://www.csu.edu.au/'
+            'dates' : '20XX'
         },
         {
-            'name' : 'Southern Connecticut State University',
-            'location' : 'New Haven, Connecticut',
+            'name' : 'Southern',
+            'location' : 'Connecticut',
             'degree' : 'Bachelor of Science in Liberal Studies',
             'major' : ['journalism', ' English', ' photography'],
-            'dates' : '1995',
-            'url' : 'http://www.southernct.edu/'
+            'dates' : '19XX'
         },
         {
-            'name' : 'University of Idaho',
-            'location' : 'Moscow, Idaho',
+            'name' : 'UI',
+            'location' : 'Idaho',
             'degree' : 'Bachelor of Science',
             'major' : ['journalism'],
-            'dates' : '1992',
-            'url' : 'http://www.uidaho.edu/'
+            'dates' : '19XX'
         }
     ],
     'onlineCourses' : [
@@ -217,9 +206,6 @@ education.display = function() {
 
            // add formatted info to the div for every school
             $(".education-entry:last").append(formattedEducationTitle, formattedDates, formattedLocation, formattedMajor);
-
-            // add URL (target="_blank" is added to HTMLschoolName in helper.js)
-            $('.education-entry:last a').attr('href', thisSchool.url);
         }
     }
 
@@ -257,15 +243,13 @@ var projects = {
             'title' : 'Website development collaboration',
             'dates' : 'Ongoing',
             'description' : 'Website for the JIS Film Festival',
-            'images' : ['images/filmfest.jpg'],
-            'url' : 'http://filmfest.jisedu.or.id'
+            'images' : ['images/filmfest.jpg']
         },
         {
             'title' : 'Portfolio page',
             'dates' : 'October 2015',
             'description' : 'Portfolio page for a Udacity project',
-            'images' : ['images/portfolio.jpg'],
-            'url' : 'http://codepen.io/lagracia/pen/ZbroLO'
+            'images' : ['images/portfolio.jpg']
         }
     ]
 };
@@ -282,10 +266,6 @@ projects.display = function() {
             var formattedTitle = HTMLprojectTitle.replace(data, thisProject.title);
             var formattedDates = HTMLprojectDates.replace(data, thisProject.dates);
             var formattedDescription = HTMLprojectDescription.replace(data, thisProject.description);
-
-            /* I wanted the link to each project to go to where the image is hosted instead of just the header. The solution is in “Custom Project Link in Resume.” To open the link in a new tab, target="_blank" must be added to HTMLworkEmployer in helper.js. */
-
-            formattedTitle = formattedTitle.replace('%url%', thisProject.url);
 
             $('#projects').append(HTMLprojectStart);
             $('.project-entry:last').append(formattedTitle, formattedDates, formattedDescription);
@@ -313,8 +293,7 @@ var pastProjects = {
             'title' : 'Graphic design',
             'dates' : '2005-14',
             'description' : 'Sample poster, logo and graphics created for school purposes',
-            'images' : ['images/poster.jpg', 'images/solitude.jpg', 'images/light.jpg', 'images/logo.jpg'],
-            'url' : 'https://www.flickr.com/photos/tedxyouthatacs/albums/72157657888796203'
+            'images' : ['images/poster.jpg', 'images/solitude.jpg', 'images/light.jpg', 'images/logo.jpg']
         }
     ]
 };
@@ -327,7 +306,6 @@ pastProjects.display = function() {
 
             var thisPastproj = pastProjects.pastProjects[pastProject];
             var formattedTitle = HTMLpastprojectTitle.replace(data, thisPastproj.title);
-            formattedTitle = formattedTitle.replace('%url%', thisPastproj.url);
             var formattedDates = HTMLpastprojectDates.replace(data, thisPastproj.dates);
             var formattedDescription = HTMLpastprojectDescription.replace(data, thisPastproj.description);
 
