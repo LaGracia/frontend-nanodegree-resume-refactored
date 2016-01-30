@@ -71,8 +71,7 @@ $(document).click(function(loc) {
 });
 
 
-/* Custom Google Map. See the documentation below for more details.
-https://developers.google.com/maps/documentation/javascript/reference */
+/* Custom Google Map. See the documentation at <https://developers.google.com/maps/documentation/javascript/reference> for more details. */
 
 // declares a global map variable
 var map;
@@ -180,8 +179,7 @@ function initializeMap() {
     }
   }
 
-  /* This function takes in the array of locations created by locationFinder()
-  and fires off Google place searches for each location. */
+  /* This function takes in the array of locations created by locationFinder() and fires off Google place searches for each location. */
 
   function pinPoster(locations) {
 
