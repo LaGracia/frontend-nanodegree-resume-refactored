@@ -20,4 +20,4 @@ With zero background in JavaScript and an inability to fully grasp the concepts 
 
 ### License
 
-The images in the Graphic Design section are copyright © 2015 Lane Graciano, with thanks to Ms. Robinson for modeling for the “Read” poster. Please don't use or redistribute these without my permission. This rest of this work is licensed under the GitHub terms of service, meaning you can view and fork this repository.
+The images in the Graphic Design section are copyright © 2015 Lane Graciano, with thanks to Ms. Robinson for modeling for the “Read” poster. Please don't use or redistribute these without my permission. This rest of this work is licensed under [GitHub’s terms of service](https://help.github.com/articles/github-terms-of-service/), meaning you can view and fork this repository.

@@ -95,6 +95,7 @@ ul {
   clear:both;
 }
 
+/* image placed in css directory because it cannot be fetched from images */
 .dark-gray {
   background: url('chalkboard-background.jpg');
 }
