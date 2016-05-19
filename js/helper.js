@@ -49,7 +49,6 @@ var HTMLonlineURL = '<br><a href="#" target="_blank">%data%</a>';
 
 var googleMap = '<div id="map"></div>';
 
-
 /* The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2. */
 
 clickLocations = [];
