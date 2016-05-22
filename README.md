@@ -1,22 +1,24 @@
 ## Description
 
-This was a project in the Udacity Front-End Web Development nanodegree program. Given a couple of JavaScript files, we had to build an interactive résumé containing distinct sections and use JQuery to embed a map.
-
-Since submitting the project, I have anonymized some of the information on the page for privacy reasons.
+This is a Udacity minicourse project for JavaScript Design Patterns. It revises the online résumé project from several months earlier.
 
 ### Features
 
-- JSON objects representing the sections
-- Embedded Google map with pins on all locations mentioned in the sections
-- Bootstrap menu bar featuring:
-    - Anchor links allowing you to jump to different points on the page 
-    - Collapsibility, showing only an icon on small devices
-- Smooth scrolling for the anchor links
-- Floating “back to top” button
+- Model with JSON objects representing bio, work, project and education info
+- Octopus (controller) that gets data from the model and loads all the views
+- Views for the various sections of the résumé:
+    - Bio header and footer
+    - Work experience
+    - Recent and past projects
+    - Education section
+    - Embedded Google map with pins on all locations mentioned
+    - Floating “back to top” button and smooth scrolling for anchor links
 
 ### Credits
 
-With zero background in JavaScript and an inability to fully grasp the concepts taught in this course unit, I completed this project mainly by trawling the discussion forum. Many thanks to students who posted questions and everyone who answered them in the threads! I also adapted code provided by [Cotswold Photo](http://cotswoldphoto.co.uk/bootstrap-float-to-top-button/) and [HTML-Tuts](http://html-tuts.com/back-to-top-button-jquery/) to implement the floating button, and by [Sycha Web Resources](http://www.sycha.com/jquery-smooth-scrolling-internal-anchor-links) for smooth scrolling.
+Unlike most (if not all) of my Udacity projects, this one actually owes much of its success to the course videos. The course instructor gave enough practice at building an app from scratch and refactoring code, so I rarely had to consult the forum this time. Thanks also to those who posted questions and answers on Stack Overflow. Links to relevant threads are included as comments in my JS code.
+
+I adapted code provided by [Cotswold Photo](http://cotswoldphoto.co.uk/bootstrap-float-to-top-button/) and [HTML-Tuts](http://html-tuts.com/back-to-top-button-jquery/) to implement the floating button, and by [Sycha Web Resources](http://www.sycha.com/jquery-smooth-scrolling-internal-anchor-links) for smooth scrolling.
 
 ### License
 
