@@ -230,7 +230,6 @@ $(function(){
             var formattedRole = $('<span/>')
             .attr('id', 'role')
             .text(bioData.role)
-            .css({'float': 'right', 'padding-top': '15px'})
             .insertAfter(formattedName);
 
             $('<hr>').insertAfter(formattedRole);
